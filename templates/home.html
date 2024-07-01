@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Information Form</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #002147; /* Deep blue background */
+            color: #ffffff; /* White text color */
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #002147; /* Deep blue text color */
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            color: #000000; /* Black form title */
+        }
+        button[type="submit"] {
+            background-color: #ffffff; /* White submit button */
+            border: none;
+            color: #002147; /* Deep blue text color */
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button[type="submit"]:hover {
+            background-color: #e0e0e0; /* Light gray on hover */
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-container">
+                <h2 class="form-title">TELCO CUSTOMER CHURN</h2>
+                <form action="{{ url_for('predict_datapoint')}}" method="post">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Left half of the form -->
+                            <div class="form-group">
+                                <select class="form-control" name="Gender" required>
+                                    <option value="">Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="SeniorCitizen" required>
+                                    <option value="">Senior Citizen</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="Partner" required>
+                                    <option value="">Partner</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="Dependents" required>
+                                    <option value="">Dependents</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="TenureMonths" placeholder="Tenure Months" required/>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="PhoneService" required>
+                                    <option value="">Phone Service</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="MultipleLines" required>
+                                    <option value="">Multiple Lines</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="InternetService" required>
+                                    <option value="">Internet Service</option>
+                                    <option value="DSL">DSL</option>
+                                    <option value="Fiber optic">Fiber optic</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="OnlineSecurity" required>
+                                    <option value="">Online Security</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="OnlineBackup" required>
+                                    <option value="">Online Backup</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!-- Right half of the form -->
+                            <div class="form-group">
+                                <select class="form-control" name="DeviceProtection" required>
+                                    <option value="">Device Protection</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="TechSupport" required>
+                                    <option value="">Tech Support</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="StreamingTV" required>
+                                    <option value="">Streaming TV</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="StreamingMovies" required>
+                                    <option value="">Streaming Movies</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="Contract" required>
+                                    <option value="">Contract</option>
+                                    <option value="Month-to-month">Month-to-month</option>
+                                    <option value="One year">One year</option>
+                                    <option value="Two year">Two year</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="PaperlessBilling" required>
+                                    <option value="">Paperless Billing</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="PaymentMethod" required>
+                                    <option value="">Payment Method</option>
+                                    <option value="Electronic check">Electronic check</option>
+                                    <option value="Mailed check">Mailed check</option>
+                                    <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+                                    <option value="Credit card (automatic)">Credit card (automatic)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="MonthlyCharges" placeholder="Monthly Charges" required/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="TotalCharges" placeholder="Total Charges" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Predict</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{result}}
+
+</body>
+</html>

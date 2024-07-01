@@ -1,1 +1,8 @@
+pandas
+numpy
+scikit-learn==1.2.2
+seaborn
 Flask
+xgboost
+gunicorn
+catboost

@@ -1,0 +1,449 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 616-546-987
+INFO:werkzeug: * Detected change in '/config/workspace/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 616-546-987
+INFO:werkzeug: * Detected change in '/config/workspace/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 616-546-987
+INFO:werkzeug: * Detected change in '/config/workspace/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 616-546-987
+INFO:werkzeug: * Detected change in '/config/workspace/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 616-546-987
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:36:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:36:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ERROR:root:Error: name 'PreferredLoginDevice_' is not defined
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "app.py", line 64, in predict_datapoint
+    data = [PreferredLoginDevice_,Gender_,SeniorCitizen_,Partner_,Dependents_,TenureMonths,PhoneService_,MultipleLines_,
+NameError: name 'PreferredLoginDevice_' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "app.py", line 87, in predict_datapoint
+    return render_template('error.html', error=str(e))
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1084, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 1013, in get_template
+    return self._load_template(name, globals)
+  File "/config/.local/lib/python3.8/site-packages/jinja2/environment.py", line 972, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/config/.local/lib/python3.8/site-packages/jinja2/loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+  File "/config/.local/lib/python3.8/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: error.html
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:37:13] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 616-546-987
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: name 'PreferredLoginDevice_' is not defined
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:39:40] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 616-546-987
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: name 'PreferredLoginDevice_' is not defined
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:40:44] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 616-546-987
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: [16:43:01] /workspace/src/predictor/cpu_predictor.cc:789: Check failed: m->NumColumns() == model.learner_model_param->num_feature (1 vs. 19) : Number of columns in data must equal to trained model.
+Stack trace:
+  [bt] (0) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x1705ee) [0x7f23cebcb5ee]
+  [bt] (1) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x741a83) [0x7f23cf19ca83]
+  [bt] (2) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x74384d) [0x7f23cf19e84d]
+  [bt] (3) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4d3e48) [0x7f23cef2ee48]
+  [bt] (4) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x534149) [0x7f23cef8f149]
+  [bt] (5) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x8f45c) [0x7f23ceaea45c]
+  [bt] (6) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGBoosterPredictFromDense+0xeb) [0x7f23ceaea96b]
+  [bt] (7) /lib/x86_64-linux-gnu/libffi.so.7(+0x6ff5) [0x7f2474e6dff5]
+  [bt] (8) /lib/x86_64-linux-gnu/libffi.so.7(+0x640a) [0x7f2474e6d40a]
+
+
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:43:01] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: [16:45:52] /workspace/src/predictor/cpu_predictor.cc:789: Check failed: m->NumColumns() == model.learner_model_param->num_feature (1 vs. 19) : Number of columns in data must equal to trained model.
+Stack trace:
+  [bt] (0) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x1705ee) [0x7f3b8a5285ee]
+  [bt] (1) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x741a83) [0x7f3b8aaf9a83]
+  [bt] (2) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x74384d) [0x7f3b8aafb84d]
+  [bt] (3) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4d3e48) [0x7f3b8a88be48]
+  [bt] (4) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x534149) [0x7f3b8a8ec149]
+  [bt] (5) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x8f45c) [0x7f3b8a44745c]
+  [bt] (6) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGBoosterPredictFromDense+0xeb) [0x7f3b8a44796b]
+  [bt] (7) /lib/x86_64-linux-gnu/libffi.so.7(+0x6ff5) [0x7f3c307caff5]
+  [bt] (8) /lib/x86_64-linux-gnu/libffi.so.7(+0x640a) [0x7f3c307ca40a]
+
+
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:45:52] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: [16:47:35] /workspace/src/predictor/cpu_predictor.cc:789: Check failed: m->NumColumns() == model.learner_model_param->num_feature (1 vs. 19) : Number of columns in data must equal to trained model.
+Stack trace:
+  [bt] (0) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x1705ee) [0x7fe0edcec5ee]
+  [bt] (1) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x741a83) [0x7fe0ee2bda83]
+  [bt] (2) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x74384d) [0x7fe0ee2bf84d]
+  [bt] (3) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4d3e48) [0x7fe0ee04fe48]
+  [bt] (4) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x534149) [0x7fe0ee0b0149]
+  [bt] (5) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x8f45c) [0x7fe0edc0b45c]
+  [bt] (6) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGBoosterPredictFromDense+0xeb) [0x7fe0edc0b96b]
+  [bt] (7) /lib/x86_64-linux-gnu/libffi.so.7(+0x6ff5) [0x7fe193f8eff5]
+  [bt] (8) /lib/x86_64-linux-gnu/libffi.so.7(+0x640a) [0x7fe193f8e40a]
+
+
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:47:35] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: [16:54:21] /workspace/src/predictor/cpu_predictor.cc:789: Check failed: m->NumColumns() == model.learner_model_param->num_feature (1 vs. 19) : Number of columns in data must equal to trained model.
+Stack trace:
+  [bt] (0) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x1705ee) [0x7fd5f8eb75ee]
+  [bt] (1) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x741a83) [0x7fd5f9488a83]
+  [bt] (2) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x74384d) [0x7fd5f948a84d]
+  [bt] (3) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4d3e48) [0x7fd5f921ae48]
+  [bt] (4) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x534149) [0x7fd5f927b149]
+  [bt] (5) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x8f45c) [0x7fd5f8dd645c]
+  [bt] (6) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGBoosterPredictFromDense+0xeb) [0x7fd5f8dd696b]
+  [bt] (7) /lib/x86_64-linux-gnu/libffi.so.7(+0x6ff5) [0x7fd69f159ff5]
+  [bt] (8) /lib/x86_64-linux-gnu/libffi.so.7(+0x640a) [0x7fd69f15940a]
+
+
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:54:21] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: [16:57:16] /workspace/src/predictor/cpu_predictor.cc:789: Check failed: m->NumColumns() == model.learner_model_param->num_feature (1 vs. 19) : Number of columns in data must equal to trained model.
+Stack trace:
+  [bt] (0) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x1705ee) [0x7f99932535ee]
+  [bt] (1) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x741a83) [0x7f9993824a83]
+  [bt] (2) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x74384d) [0x7f999382684d]
+  [bt] (3) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4d3e48) [0x7f99935b6e48]
+  [bt] (4) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x534149) [0x7f9993617149]
+  [bt] (5) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x8f45c) [0x7f999317245c]
+  [bt] (6) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGBoosterPredictFromDense+0xeb) [0x7f999317296b]
+  [bt] (7) /lib/x86_64-linux-gnu/libffi.so.7(+0x6ff5) [0x7f9a394f5ff5]
+  [bt] (8) /lib/x86_64-linux-gnu/libffi.so.7(+0x640a) [0x7f9a394f540a]
+
+
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:57:16] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: [16:57:53] /workspace/src/predictor/cpu_predictor.cc:789: Check failed: m->NumColumns() == model.learner_model_param->num_feature (1 vs. 19) : Number of columns in data must equal to trained model.
+Stack trace:
+  [bt] (0) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x1705ee) [0x7f922e7f15ee]
+  [bt] (1) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x741a83) [0x7f922edc2a83]
+  [bt] (2) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x74384d) [0x7f922edc484d]
+  [bt] (3) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4d3e48) [0x7f922eb54e48]
+  [bt] (4) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x534149) [0x7f922ebb5149]
+  [bt] (5) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x8f45c) [0x7f922e71045c]
+  [bt] (6) /config/.local/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGBoosterPredictFromDense+0xeb) [0x7f922e71096b]
+  [bt] (7) /lib/x86_64-linux-gnu/libffi.so.7(+0x6ff5) [0x7f92d4a93ff5]
+  [bt] (8) /lib/x86_64-linux-gnu/libffi.so.7(+0x640a) [0x7f92d4a9340a]
+
+
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 16:57:53] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: need to call fit or load_model beforehand
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:01:11] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: need to call fit or load_model beforehand
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:02:21] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:root:Error: name 'model1' is not defined
+ERROR:app:Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 883, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 902, in finalize_request
+    response = self.make_response(rv)
+  File "/config/.local/lib/python3.8/site-packages/flask/app.py", line 1174, in make_response
+    raise TypeError(
+TypeError: The view function for 'predict_datapoint' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:10:28] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:11:14] "[32mPOST /predict_datapoint HTTP/1.1[0m" 302 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:11:15] "GET /single_prediction/Hooray!%20No%20churn%20celebration! HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:13:53] "[32mPOST /predict_datapoint HTTP/1.1[0m" 302 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:13:54] "GET /single_prediction/No%20churn%20detected! HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:26:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:27:04] "[32mPOST /predict_datapoint HTTP/1.1[0m" 302 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:27:05] "GET /single_prediction/No%20churn%20detected! HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:30:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:37:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:37:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:40:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:42:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:45:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:47:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:47:22] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:48:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:54:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:55:37] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:56:43] "[32mPOST /predict_datapoint HTTP/1.1[0m" 302 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:56:44] "GET /single_prediction/No%20churn%20detected! HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.18.0.38:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:58:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:59:35] "[32mPOST /predict_datapoint HTTP/1.1[0m" 302 -
+INFO:werkzeug:172.18.0.45 - - [01/Jul/2024 17:59:35] "GET /single_prediction/No%20churn%20detected! HTTP/1.1" 200 -
